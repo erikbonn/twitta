@@ -10,8 +10,8 @@ export function IconHoverEffect({
   red = false,
 }: IconHoverEffectProps) {
   const colorClasses = red
-    ? "outline-red-400 hover:bg-red-200 group-hover-bg-red-200 group-focus-visible:bg-red-200 gocus-visible:bg-red-200"
-    : "outline-gray-400 hover:bg-gray-200 group-hover-bg-gray-200 group-focus-visible:bg-gray-200 gocus-visible:bg-gray-200";
+    ? "outline-red-400 hover:bg-red-200 group-hover-bg-red-200 group-focus-visible:bg-red-200 focus-visible:bg-red-200"
+    : "outline-gray-400 hover:bg-gray-200 group-hover-bg-gray-200 group-focus-visible:bg-gray-200 focus-visible:bg-gray-200";
 
   return (
     <div
