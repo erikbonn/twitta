@@ -88,7 +88,8 @@ function TweetCard({
                 if (tweet.id === id) {
                   return {
                     ...tweet,
-                    likeCount: (tweet.likeCount as number) + countModifier,
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/restrict-plus-operands
+                    likeCount: tweet.likeCount + countModifier,
                     likedByMe: addedLike,
                   };
                 }
