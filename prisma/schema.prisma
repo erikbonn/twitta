@@ -75,8 +75,8 @@ model User {
     sessions      Session[]
 
     // Non-Next Auth
-    Tweets    Tweet[]
-    Likes     Like[]
+    tweets    Tweet[]
+    likes     Like[]
     followers User[]  @relation(name: "followers")
     follows   User[]  @relation(name: "followers")
 }
