@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type {
   GetStaticPaths,
   GetStaticPropsContext,
@@ -36,7 +38,7 @@ const ProfilePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           ...oldData,
           isFollowing: addedFollow,
           // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-          followersCount: (oldData.followersCount + countModifier) as number,
+          followersCount: oldData.followersCount + countModifier,
         };
       });
     },
@@ -61,14 +63,10 @@ const ProfilePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
           <h1 className="text-lg font-bold">{profile.name}</h1>
           <div className="text-gray-500">
             {profile.tweetsCount}{" "}
-            {getPlural(profile.tweetsCount as number, "Tweet", "Tweets")} -{" "}
+            {getPlural(profile.tweetsCount, "Tweet", "Tweets")} -{" "}
             {profile.followersCount}{" "}
-            {getPlural(
-              profile.followersCount as number,
-              "Follower",
-              "Followers"
-            )}{" "}
-            - {profile.followersCount} Following
+            {getPlural(profile.followersCount, "Follower", "Followers")} -{" "}
+            {profile.followersCount} Following
           </div>
         </div>
         <FollowButton
