@@ -52,12 +52,12 @@ export const authOptions: NextAuthOptions = {
       clientId: env.DISCORD_CLIENT_ID,
       clientSecret: env.DISCORD_CLIENT_SECRET,
     }),
-    GoogleProvider({
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      clientId: env.GOOGLE_CLIENT_ID ?? "",
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      clientSecret: env.GOOGLE_CLIENT_SECRET ?? "",
-    }),
+    // GoogleProvider({
+    //   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    //   clientId: env.GOOGLE_CLIENT_ID ?? "",
+    //   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    //   clientSecret: env.GOOGLE_CLIENT_SECRET ?? "",
+    // }),
     /**
      * ...add more providers here.
      *
